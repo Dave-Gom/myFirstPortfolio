@@ -1,10 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+// import NavBar2 from "./components/NavOption2/Header";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import Home from "./components/pages/Home";
+// import Contact from "./components/pages/Contact";
+// import About from "./components/pages/About";
+
+import Contents from "./components/Contents";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Contents />
+    </div>
+  );
+}
+
+export default App;
+
+{
+  /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +33,5 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
+      </header> */
 }
-
-export default App;
