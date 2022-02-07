@@ -83,18 +83,12 @@
   text-decoration: none;
 }
 
-.nav-contens {
-  display: flex;
-  justify-content: space-between;
-  width: 45%;
-  height: 10vh;
-  margin: 0;
-}
-
 .nav-links {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
+  width: auto;
+  height: 10vh;
+  margin: 0;
 }
 
 /* estilos de los enlaces NavLink */
@@ -166,7 +160,6 @@ span {
   border: none;
   display: none;
   cursor: pointer;
-  position: relative;
 }
 
 .burger div {

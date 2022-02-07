@@ -1,7 +1,9 @@
+import HeaderHome from "../components/HeaderHome";
+
 const Home = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "Center" }}>
-      <h1>Home</h1>
+    <div>
+      <HeaderHome />
     </div>
   );
 };
