@@ -1,5 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Contents from "./pages/Contents";
+import Header from "./tests/NavOption2/Header";
+// import Contents from "./tests/navbar3/Contents";
 
 // import NavBar2 from "./components/NavOption2/Header";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -7,11 +10,11 @@ import "./App.css";
 // import Contact from "./components/pages/Contact";
 // import About from "./components/pages/About";
 
-import Contents from "./components/Contents";
-
 function App() {
   return (
     <div className="App">
+      {/* <Header /> */}
+
       <Contents />
     </div>
   );

@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import useWindowDimensions from "../hooks/windowDimensions";
+import MenuFunContext from "./MenuFunContext";
+
 import "./NavBar.css";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     setShowMenu(false);
@@ -19,35 +23,47 @@ const NavBar = () => {
     setClicked(true);
   };
 
+  const handleActive = ({ isActive }) => {
+    return isActive ? "isActive item-nav" : "item-nav";
+  };
+
   return (
-    <nav>
-      <NavLink to="/">
-        <div className="logo">
-          <h4>Dave</h4>
-        </div>
+    <nav className="principal-nav">
+      <NavLink className="logo" to="/" onClick={handleLinkClick}>
+        <h4>Dave</h4>
       </NavLink>
-      <ul className={`nav-links ${showMenu ? "nav-active" : ""}`}>
-        <li>
-          <NavLink to="/resume" onClick={handleLinkClick}>
-            CV
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/proyects" onClick={handleLinkClick}>
-            Proyectos
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/now" onClick={handleLinkClick}>
-            Ahora
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" onClick={handleLinkClick}>
-            Contacto
-          </NavLink>
-        </li>
-      </ul>
+
+      <div className={`nav-links ${showMenu ? "nav-active" : "nav-hidden"}`}>
+        {width < 768 ? <MenuFunContext /> : ""}
+        <NavLink
+          className={handleActive}
+          to="/resume"
+          onClick={handleLinkClick}
+        >
+          <span>CV</span>
+        </NavLink>
+
+        <NavLink
+          className={handleActive}
+          to="/proyects"
+          onClick={handleLinkClick}
+        >
+          <span>Proyectos</span>
+        </NavLink>
+
+        <NavLink className={handleActive} to="/now" onClick={handleLinkClick}>
+          <span>Ahora</span>
+        </NavLink>
+
+        <NavLink
+          className={handleActive}
+          to="/contact"
+          onClick={handleLinkClick}
+        >
+          <span>Contacto</span>
+        </NavLink>
+      </div>
+      {width > 768 ? <MenuFunContext /> : ""}
       <button className="burger" onClick={handleMenu}>
         <div className="line1"></div>
         <div className="line2"></div>
