@@ -1,0 +1,51 @@
+/* Flipping Button styles */
+
+.box-area {
+  position: relative;
+  height: 35px;
+  transform-style: preserve-3d;
+  transition: transform 200ms ease-in-out;
+  transform: translateZ(-20px);
+}
+
+.box-area:hover {
+  transform: rotateX(-90deg) translateY(60px);
+}
+
+.box {
+  backface-visibility: hidden;
+  min-width: 45px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.3rem;
+  font-weight: bold;
+}
+
+.side-one {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transform: translateZ(20px);
+  text-transform: uppercase;
+  padding: 0.3rem;
+}
+
+.side-two {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transform: rotateX(90deg) translateZ(60px);
+  text-transform: uppercase;
+  padding: 0.3rem;
+}
+
+/*  */
+
+.menu-func {
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

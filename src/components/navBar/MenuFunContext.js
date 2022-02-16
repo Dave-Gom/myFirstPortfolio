@@ -1,3 +1,5 @@
+import "./MenuFunContext.css";
+
 const MenuFunContext = () => {
   return (
     <div className="menu-func">

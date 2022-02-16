@@ -1,0 +1,30 @@
+.CvHero {
+  min-height: 100vh;
+  padding: 3rem 15rem;
+  width: 100%;
+  margin: 0;
+}
+
+.CvHero h1 {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .CvHero {
+    padding: 3rem 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .CvHero h1 {
+    font-size: 35px;
+  }
+  .CvHero {
+    margin-top: 10vh;
+    padding: 0;
+    max-width: 100vw;
+  }
+  .CvHero h1 small {
+    width: 100%;
+  }
+}

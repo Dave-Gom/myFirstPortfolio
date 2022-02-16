@@ -1,0 +1,25 @@
+.section-one {
+  min-height: 90vh;
+  padding: 3rem 15rem;
+  color: #162c49;
+}
+
+.section-one p {
+  font-size: 22px;
+  /* font-weight: bold; */
+  margin: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-one {
+    padding: 3rem 7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-one {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    margin: 0%;
+  }
+}

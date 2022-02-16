@@ -1,10 +1,14 @@
-import HeaderHome from "../components/HeaderHome";
+import HeaderHome from "../components/home/HeaderHome";
+import HomeSection from "../components/home/HomeSection";
+import HomeServicesSection from "../components/home/HomeServicesSection";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HeaderHome />
-    </div>
+      <HomeSection />
+      <HomeServicesSection />
+    </>
   );
 };
 

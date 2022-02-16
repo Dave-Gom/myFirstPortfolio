@@ -1,13 +1,11 @@
 #homesection {
+  margin-top: 10vh;
   padding-top: 0;
-  width: 100vw;
-  background: url("../img/dummy-header.jpg") no-repeat;
+  width: 100%;
+  background: url("../../img/dummy-header.jpg") no-repeat;
   min-height: 90vh;
   background-size: cover;
   background-attachment: fixed;
-}
-.home-inner {
-  padding-top: 90px;
 }
 
 .dark-overlay {
@@ -27,14 +25,27 @@
 
 .container h1 {
   font-size: 70px;
+  text-shadow: 0 0 2px #162c49;
+  font-weight: bold;
 }
 .container h2 {
   font-size: 30px;
+  text-shadow: 0 0 5px #162c49;
+  font-weight: bold;
 }
 
-.hero-img {
-  margin: 1rem;
-  width: 15vw;
-  border: 1.3px solid #162c49;
-  border-radius: 5px;
+a {
+  color: #356eb8;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0%;
+  }
+  .container h1 {
+    font-size: 40px;
+  }
+  .container h2 {
+    font-size: 25px;
+  }
 }

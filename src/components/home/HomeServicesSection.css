@@ -1,0 +1,46 @@
+.servicesSection {
+  background: url("../../img/services-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.containerServ {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 60vw;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: white;
+}
+
+.serv-title {
+  font-size: 50px;
+}
+.serv-exp {
+  font-size: 25px;
+}
+
+.services {
+  margin-top: 2rem;
+}
+
+.services li {
+  margin-left: 2rem;
+  font-size: 25px;
+  text-align: left;
+  /* font-weight: bold; */
+  /* list-style: none; */
+}
+
+.home-innerServ {
+  padding-top: 90px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .containerServ {
+    width: 90vw;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import Footer from "../components/footer/Footer";
+import NavBar from "../components/navBar/NavBar";
 
 import Contact from "./Contact";
 import Home from "./Home";
@@ -23,6 +24,7 @@ const Contents = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 };

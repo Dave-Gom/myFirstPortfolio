@@ -1,5 +1,5 @@
+import PhDavid from "../PhDavid";
 import "./HeaderHome.css";
-import Dave from "../img/Dave-Home.jpg";
 
 const HeaderHome = () => {
   return (
@@ -9,9 +9,8 @@ const HeaderHome = () => {
           <div className="container">
             <h1>Hola! Soy Dave Gomez</h1>
             <h2>Desarrollador Fullstack Junior</h2>
-            <a href="#">Read More</a>
             <div className="">
-              <img src={Dave} className="hero-img" />
+              <PhDavid />
             </div>
           </div>
         </div>
