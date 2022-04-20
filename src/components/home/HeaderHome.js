@@ -1,15 +1,20 @@
+import { useContext } from "react";
+import BasicInfoContext from "../../context/basicInfoContext";
 import PhDavid from "../PhDavid";
 import "./HeaderHome.css";
 
-const HeaderHome = () => {
+const HeaderHome = ({ info }) => {
+  const { nickName, lastName } = useContext(BasicInfoContext);
   return (
     <header id="homesection">
       <div className="dark-overlay">
         <div className="home-inner">
           <div className="container">
-            <h1>Hola! Soy Dave Gomez</h1>
+            <h1>
+              Hola! Soy {nickName} {lastName}
+            </h1>
             <h2>Desarrollador Fullstack Junior</h2>
-            <div className="">
+            <div>
               <PhDavid />
             </div>
           </div>

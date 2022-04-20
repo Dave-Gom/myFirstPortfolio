@@ -1,20 +1,17 @@
 import "./Footer.css";
 import logoReact from "./../../logo.svg";
+import { useContext } from "react";
+import BasicInfoContext from "../../context/basicInfoContext";
+
 const Footer = () => {
+  const { lastName, firstName, instagram, linkedIn, gitHub, e_mail } =
+    useContext(BasicInfoContext);
   return (
     <div className="App-footer">
       <div>
         <span>
           <a
-            href="https://www.linkedin.com/in/dave-gomez-54b22a1b7/"
-            className="fa fa-linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
-        </span>
-        <span>
-          <a
-            href="https://www.instagram.com/davegomezarca/"
+            href={instagram}
             className="fa fa-instagram"
             target="_blank"
             rel="noopener noreferrer"
@@ -22,7 +19,23 @@ const Footer = () => {
         </span>
         <span>
           <a
-            href="mailto:davegomez426@gmail.com"
+            href={linkedIn}
+            className="fa fa-linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+        </span>
+        <span>
+          <a
+            href={gitHub}
+            className="fa fa-github"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+        </span>
+        <span>
+          <a
+            href={`mailto:${e_mail}`}
             className="fa fa-google"
             target="_blank"
             rel="noopener noreferrer"
@@ -34,7 +47,9 @@ const Footer = () => {
         <img src={logoReact} className="react-logo" alt="logo" />
       </div>
       <div>
-        <h3>by David E. Gomez</h3>
+        <h3>
+          by {firstName} E. {lastName}
+        </h3>
       </div>
     </div>
   );

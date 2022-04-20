@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import BasicInfoContext from "../../context/basicInfoContext";
 import useWindowDimensions from "../../hooks/windowDimensions";
 import MenuFunContext from "./MenuFunContext";
 
@@ -27,10 +28,11 @@ const NavBar = () => {
     return isActive ? "isActive item-nav" : "item-nav";
   };
 
+  const { nickName } = useContext(BasicInfoContext);
   return (
     <nav className="principal-nav">
       <NavLink className="logo" to="/" onClick={handleLinkClick}>
-        <h4>Dave</h4>
+        <h4>{nickName}</h4>
       </NavLink>
 
       <div className={`nav-links ${showMenu ? "nav-active" : "nav-hidden"}`}>
